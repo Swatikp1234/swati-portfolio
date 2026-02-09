@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f2f5ff;
+  color: #222;
+  line-height: 1.7;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2, #43cea2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  animation: gradientMove 8s ease infinite;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons a {
+  padding: 12px 22px;
+  margin: 5px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  background: #fff;
+  color: #764ba2;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-buttons a.outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.hero-buttons a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.section {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background: #fff;
+  border-radius: 18px;
+}
+
+.section.alt {
+  background: linear-gradient(120deg, #edf2ff, #fdfbff);
+}
+
+h2 {
+  color: #5a67d8;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.skills-grid span {
+  background: #e0e7ff;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.project-card {
+  background: #f9faff;
+  border-left: 6px solid #667eea;
+  padding: 1.8rem;
+  margin-bottom: 1.8rem;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+/* Animations */
+.reveal {
+  animation: reveal 1.3s ease;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
